@@ -16,14 +16,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
 from clientes import views
 
 urlpatterns = [
-
     path('admin/', admin.site.urls),
     path('atualizar-cliente/<int:id>/', views.atualizar_cliente, name='atualizar_cliente'),
-    path('exculir-cliente/<int:id>/', views.excluir_cliente, name='excluir_cliente'),
+    path('excluir-cliente/<int:id>/', views.excluir_cliente, name='excluir_cliente'),
     path('login/', views.login_usuario, name='login_usuario'),
+    path('novo-usuario/', views.novo_usuario, name='novo_usuario'),
     path('', views.novo_cliente, name='novo_cliente'),
 ]
